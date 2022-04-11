@@ -1,8 +1,9 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from .routers import plants
 
 from app.core.config import settings
+
+from .routers import plants
 
 
 def get_application():
@@ -22,6 +23,7 @@ def get_application():
 
 
 app = get_application()
+
 
 @app.get("/")
 async def root():
